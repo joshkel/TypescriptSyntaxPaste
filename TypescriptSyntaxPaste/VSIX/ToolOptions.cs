@@ -169,6 +169,5 @@ namespace TypescriptSyntaxPaste.VSIX
         {
             return string.Format("{0} => {1}", OldTypeName ?? "name", NewTypeName ?? "new name");
         }
-
     }
 }

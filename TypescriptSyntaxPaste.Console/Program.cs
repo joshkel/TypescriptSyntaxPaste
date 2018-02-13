@@ -22,82 +22,14 @@ namespace TypescriptSyntaxPaste.Console
 
     class MySettingStore : ISettingStore
     {
-        public bool AddIPrefixInterfaceDeclaration
+        public bool AddIPrefixInterfaceDeclaration => false;
+        public bool IsConvertListToArray => true;
+        public bool IsConvertMemberToCamelCase => true;
+        public bool IsConvertToInterface => true;
+        public bool IsInterfaceOptionalProperties => false;
+        public TypeNameReplacementData[] ReplacedTypeNameArray => new TypeNameReplacementData[]
         {
-            get
-            {
-                return true;
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsConvertListToArray
-        {
-            get
-            {
-                return true;
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsConvertMemberToCamelCase
-        {
-            get
-            {
-               return false;
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsConvertToInterface
-        {
-            get
-            {
-                return true;
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsInterfaceOptionalProperties
-        {
-            get
-            {
-                return false;
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public TypeNameReplacementData[] ReplacedTypeNameArray
-        {
-            get
-            {
-                return new TypeNameReplacementData[0];
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+            new TypeNameReplacementData() { OldTypeName="DateTime", NewTypeName="Date" }
+        };
     }
 }
