@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using TypescriptSyntaxPaste.VSIX;
 
 namespace TypescriptSyntaxPaste.Console
@@ -11,11 +8,14 @@ namespace TypescriptSyntaxPaste.Console
     {
         static void Main(string[] args)
         {
-            var cScript = @"class Foo{}";
-            CSharpToTypescriptConverter csharpToTypescriptConverter = new CSharpToTypescriptConverter();
-            var typescript = csharpToTypescriptConverter.ConvertToTypescript(cScript, new MySettingStore());
+            foreach (string filename in args)
+            {
+                var cScript = File.ReadAllText(filename);
+                CSharpToTypescriptConverter csharpToTypescriptConverter = new CSharpToTypescriptConverter();
+                var typescript = csharpToTypescriptConverter.ConvertToTypescript(cScript, new MySettingStore());
 
-            System.Console.WriteLine(typescript);
+                System.Console.WriteLine(typescript);
+            }
         }
     }
 
