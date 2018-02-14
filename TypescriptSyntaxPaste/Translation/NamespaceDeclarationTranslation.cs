@@ -34,9 +34,9 @@ namespace RoslynTypeScript.Translation
 
         protected override string InnerTranslate()
         {
-            string exportStr = IsExport ? "export" : "";
+            string exportStr = IsExport ? "export " : "";
 
-            return $@"{exportStr} module {Name.Translate()}
+            return $@"{exportStr}namespace {Name.Translate()}
                                 {{
                                 {Members.Translate()}
                                 }}";

@@ -29,7 +29,7 @@ namespace TypescriptSyntaxPaste.Console
         public bool IsInterfaceOptionalProperties => false;
         public TypeNameReplacementData[] ReplacedTypeNameArray => new TypeNameReplacementData[]
         {
-            new TypeNameReplacementData() { OldTypeName="DateTime", NewTypeName="Date" }
+            new TypeNameReplacementData() { OldTypeName="DateTime", NewTypeName="Date" },
         };
     }
 }

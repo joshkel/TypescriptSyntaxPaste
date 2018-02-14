@@ -260,7 +260,7 @@ namespace RoslynTypeScript
             return $"<{join}>";
         }
 
-        public static string TranslateConvernsion(Conversion conversion, NamespaceDeclarationTranslation ns, string innerTranslation)
+        public static string TranslateConversion(Conversion conversion, NamespaceDeclarationTranslation ns, string innerTranslation)
         {
             var name = Helper.GetUniqueHashName(conversion.MethodSymbol.OriginalDefinition);
             var clss = Helper.GetClassOfMethod(conversion.MethodSymbol.OriginalDefinition);

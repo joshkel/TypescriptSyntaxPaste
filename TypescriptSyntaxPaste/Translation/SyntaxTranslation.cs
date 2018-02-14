@@ -42,8 +42,7 @@ namespace RoslynTypeScript.Translation
         public Compilation Compilation { get; set; }
 
         public virtual string Translate()
-        {           
-
+        {
             var result = string.Empty;
 
             if (SyntaxString != null)
