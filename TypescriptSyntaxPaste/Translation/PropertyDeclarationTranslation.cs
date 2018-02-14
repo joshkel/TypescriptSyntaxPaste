@@ -33,7 +33,7 @@ namespace RoslynTypeScript.Translation
             if (found is InterfaceDeclarationTranslation)
             {
                 //return string.Format("{0}: {1}", syntax.Identifier,type.Translate());
-                return $"{Helper.GetAttributeList(Syntax.AttributeLists)}{Syntax.Identifier}: {Type.Translate()} ;";
+                return $"{Helper.GetAttributeList(Syntax.AttributeLists)}{Syntax.Identifier}: {Type.Translate()};";
             }
 
             // hmm, if it's in class, much thing to do
@@ -50,7 +50,7 @@ namespace RoslynTypeScript.Translation
                 {
                     defaultStr = " = " + defaultStr;
                 }
-                return $"{Helper.GetAttributeList(Syntax.AttributeLists)} {Modifiers.Translate()} {Syntax.Identifier}: {Type.Translate()}{defaultStr} ;";
+                return $"{Helper.GetAttributeList(Syntax.AttributeLists)} {Modifiers.Translate()} {Syntax.Identifier}: {Type.Translate()}{defaultStr};";
             }
 
             return AccessorList.Translate();

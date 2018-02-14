@@ -80,6 +80,7 @@ namespace RoslynTypeScript.Translation
                     return "boolean";
                 case "object":
                     return "Object";
+
                 // there is not char in javascript, thinking on whether char in C# should be a number or string
                 // looks like string is better (not so sure)
                 case "char":
